@@ -6,7 +6,7 @@ export default function Player() {
 	const [playerName, setPlayerName] = useState('unknown entity');
 	
 	useEffect(() => {
-		buttonRef.current.focus()
+		buttonRef.current?.focus();
 	}, []);
 
 
@@ -25,8 +25,9 @@ export default function Player() {
     <section id="player">
       <h2>Welcome {playerName} </h2>
       <p>
-        <input type="text" ref={player} onKeyDown={handleKeyDown} />
-        <button ref={buttonRef} onClick={handleClick}>
+        <label htmlFor="player-name" style={{ position: 'absolute', left: '-10000px' }}>Player name</label>
+        <input id="player-name" type="text" ref={player} aria-label="Player name" onKeyDown={handleKeyDown} />
+        <button type="button" ref={buttonRef} onClick={handleClick}>
           Set Name
         </button>
       </p>
