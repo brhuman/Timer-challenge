@@ -1,4 +1,4 @@
-# Refs & Portals — Take-Home Test
+# Refs & Portals — Home Job Test
 
 Task: Build a small React app with timed challenges (1s, 5s, 10s, 15s). The user tries to stop the timer and sees the result in a modal.
 
